@@ -1,0 +1,60 @@
+.contCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    gap: 40px;             /* separar cards  */
+    flex-grow: 1;
+    padding-inline: 0.5rem;
+    margin-left: 700px;
+    max-width: 50%;
+    margin-left: 450px;
+}
+
+.pageNumbers {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: rgb(200, 196, 196);
+    padding: 3rem;
+}
+
+.pageNumbers li {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageNumbers li.active {
+    background-color: #eb544d;
+    color: white;
+    font-weight: 500;
+}
+
+.pageNumbers li button {
+    background-color: transparent;
+    border: none;
+    color: #66625c;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.pageNumbers li button:hover {
+    color: white;
+    background-color: #fff;
+}
+
+.pageNumbers li button:focus {
+    outline: none;
+}
+
+.notFound {
+    height: 15rem;
+}

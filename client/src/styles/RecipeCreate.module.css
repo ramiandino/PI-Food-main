@@ -1,0 +1,210 @@
+.create {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./images/fondoCreate.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cardCreate {
+    width: 600px;
+    min-height: 420px;
+    border-radius: 50px;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    background-color: #ffcd02;
+}
+
+.contGral {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.title {
+    background-color: #d1c1c6;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border-radius: 50px 50px 0px 0px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.food {
+    height: 70px;
+    margin-left: 12px;
+}
+
+.title {
+    color: #fff;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    position: relative;
+}
+
+.diets {
+    display: flex;
+    list-style: none;
+    gap: 0.8rem;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.button {
+    height: 35px;
+    width: 100px;
+    border-radius: 9px;
+    background-color: #eb544d;
+    color: #fff;
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+}
+
+.button:disabled {
+    background-color: #f8f7f7;
+    color: #cfcfcf;
+    border: none;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.deleteButton {
+    border-radius: 10px;
+    border: none;
+    background-color: #eb544d;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.select {
+    margin-top: 5px;
+    padding-left: 15px;
+    height: 30px;
+    width: 220px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f8f7f7;
+    font-family: "Rubik", sans-serif;
+}
+
+.select:focus {
+    outline: none;
+}
+
+.options {
+    background-color: #f8f7f7;
+    font-family: "Rubik", sans-serif;
+}
+
+.chef {
+    height: 550px;
+    position: absolute;
+    right: -490px;
+    top: 70px;
+    margin-top: -130px;
+}
+
+.recipeForm {
+    top: 70px;
+    width: 500px;
+    margin-bottom: -750px;
+}
+
+.buttonHome {
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.error {
+    font-family: "Rubik", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    color: #f86058;
+}
+
+.navBar {
+    background: radial-gradient(circle, rgb(123, 136, 137) 0%, rgba(222, 12, 12, 0.443) 100%);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+back {
+    text-align: center
+}
+
+.form {
+    padding-top: 20px;
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.izq {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 40px;
+    gap: 1.3rem;
+}
+
+
+.der {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 40px;
+    gap: 1.3rem;
+}
+
+
+.inputs {
+    margin-top: 5px;
+    padding-left: 15px;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f8f7f7;
+}
+
+.inputs:focus {
+    outline: none;
+}
+
+.input {
+    margin-top: 5px;
+    padding-left: 15px;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f8f7f7;
+}
+
+.input:focus {
+    outline: none;
+} 

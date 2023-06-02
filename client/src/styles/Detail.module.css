@@ -1,0 +1,232 @@
+.allDetail {
+    width: 100%;
+    min-height: 100vh;
+    /* background: radial-gradient(circle, rgb(9, 78, 182) 0%, rgba(0, 0, 0, 0.738) 100%); */
+    background-image: url(./images/fondoDetail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.loading {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -600px;
+}
+
+.infoBasica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+.navBar {
+    background-color: #007bff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.buttonHome {
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contGral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.contBlue {
+    display: flex;
+    background-color: #007bff;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+}
+
+.contGris {
+    display: flex;
+    background-color: #f7f7f8;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.contIzq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+    width: 380px;
+    height: 470px;
+    border-radius: 50px;
+    box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    min-height: 230px;
+    max-width: 230px;
+    position: absolute;
+    margin-bottom: 5px;
+    border-radius: 50px;
+    margin-left: -110px;
+    margin-top: -50px;
+}
+
+/* .circulo {
+    background-color: rgba(217, 217, 217, 0.582);
+    height: 850px;
+    width: 350px;
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -150px;
+} */
+
+.name {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    color: #66625c;
+    margin-bottom: -40px;
+}
+
+.diets {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.diets div {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 25px;
+    border-radius: 40px;
+}
+
+.id {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #66625c;
+    max-width: 50%;
+    text-align: center;
+}
+
+.contDer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    width: 380px;
+    height: 470px;
+    border-radius: 50px;
+    margin-bottom: -30px;
+}
+
+.number {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+}
+
+
+.deleteButton {
+    color: rgb(204, 33, 33);
+    background-color: #8b1313;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+    padding: 0px 10px;
+
+}
+
+.filaStat {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #868686;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.barra {
+    background-color: #fff;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.33);
+    height: 20px;
+    width: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.healthScore {
+    height: 100%;
+    background-color: #eb544d;
+    max-width: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.summary {
+    height: 100%;
+    background-color: #22c02a;
+    max-width: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.stepbyStep {
+    height: 100%;
+    background-color: #33aeaf;
+    max-width: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
