@@ -57,8 +57,16 @@ export default function Home() {
         }
         // dispatch(setCurrentPage(1)); esta es otra forma de solucionar lo del setcurrentpage
     }
+    
     function handleFilterCreated(event) {
+        if (event.target.value === "Existing" || event.target.value === "Created") {
+        event.preventDefault();
         dispatch(filterCreated(event.target.value));
+        }
+        if (event.target.value === "All") {
+        event.preventDefault();
+        dispatch(resetRecipes());
+        }
     }
     return (
         <div className={styles.containerHome}>

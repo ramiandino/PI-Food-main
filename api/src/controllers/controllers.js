@@ -10,8 +10,8 @@ const axios = require("axios");
 
 const getApiInfo = async () => {
   const apiUrl = await axios.get(
-    // `https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&number=90&addRecipeInformation=true` //api original
-    "https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5" //ilimitada.
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&number=90&addRecipeInformation=true` //api original
+    // "https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5" //ilimitada.
   );
 
   const apiInfo = await apiUrl.data.results.map((recipe) => {
@@ -28,7 +28,7 @@ const getApiInfo = async () => {
         : ["No existen instrucciones para esta receta."],
       img: recipe.image,
       diets: recipe.diets
-        ? recipe.diets.map((el) => el)
+        ? recipe.diets.map((diet) => diet)
         : "This recipe has no associated diets",
     };
   });
@@ -39,16 +39,26 @@ const getApiInfo = async () => {
 //INFORMACION DE VIENE DE LA BASE DE DATOS.
 
 const getDbInfo = async () => {
-  return await Recipe.findAll({
+  const recipesDB = await Recipe.findAll({
     include: {
       model: Diet,
-      attributes: ["name"],
-      //THROUGH COMPRUEBA LOS ATRIBUTOS.POR EJEMPLO TRAEME NOMBRE DESDE LOS ATRIBUTOS.
+      attributes: ["name"], //le pasamos solo el name treme solo lo que tiene el atributo y no todo lo que tiene el modelo
       through: {
         attributes: [],
       },
     },
   });
+
+  const recipesMapeados = recipesDB?.map((recipe) => {
+    //devolvemos objetos mas simplesque contineen solo datos relevantes
+    const { diets } = recipe;
+    const recipeData = {
+      ...recipe.dataValues,
+      diets: diets.map((r) => r.name),
+    };
+    return recipeData;
+  });
+  return recipesMapeados;
 };
 
 const getAllRecipes = async () => {

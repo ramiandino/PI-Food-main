@@ -35,7 +35,7 @@
 // }
 // export default RecipeDetail;
 
-import { getDetail, cleanDetail, deleteRecipe, getRecipes } from "../actions/index.js";    //me traigo las actions    
+import { getDetail, getDetailFromState, deleteRecipe, getRecipes } from "../actions/index.js";    //me traigo las actions    
 import { useDispatch,useSelector } from "react-redux";// use dispatch para hacer el dispatch de esa action  con use selector me traigo la info del estado global
 import { useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
@@ -48,13 +48,15 @@ const RecipeDetail = () => {
     const { id } = useParams(); //use params me retorna un objeto por eso podemos hacer distractoring
     const history = useHistory();
     const recipeDetail = useSelector((state) => state.detail); //es un Hook que nos permite extraer datos del store de Redux utilizando una función selectora
-    //dodmount unmount update siclos de vida en el useEffect
-    useEffect(() => {               //cuando se retorna una funcion el useEffect  lo que hace es ejecutar el return cuando se desmonta el componente 
-        dispatch(getDetail(id));            //(didmount)//el id lo sacamos de use params  cuando estemos en el componente de detalles queremos que                                                                           //queremos que se cargue la info del personaje para poder visualizarla 
-        return ()=> dispatch(cleanDetail())     //(unmount)//cuando yo no este en estoy en este componente y no estoy viendo el detalle de ningun videojuego quiero que
-        },[dispatch]);//(update)                //se me limpie el estado por que sino se me muestra unos milisegundos la info del personaje anterior y eso no debe pasar entonces
-                                                //creamos una action que se llame cleandetail que se va a ejecutar cuando se desmonta el componente y cuando pase eso se va a 
-                                                //despachar la action cleandetail que lo que hace es limpiarme el estado (1)
+    const allRecipes = useSelector((state) => state.recipes);
+    
+    useEffect(() => {
+    if (allRecipes.length) {
+      dispatch(getDetailFromState(id));
+    } else {
+      dispatch(getDetail(id));
+    }
+  }, [dispatch, id, allRecipes.length]);
 
     const handlerDelete = () => {
         dispatch(deleteRecipe(id));
@@ -87,7 +89,7 @@ const RecipeDetail = () => {
                                 <ul className={styles.diets}>
                                 {recipeDetail[0].diets.map((diet) => (
                                 <div key={recipeDetail[0].name + diet} className={diet}>
-                                    {diet.toUpperCase()}
+                                    {/* {diet.toUpperCase()} */}
                                 </div>
                             ))}
                             </ul>
@@ -95,9 +97,8 @@ const RecipeDetail = () => {
                             </div> 
                         </div> 
                             <div className={styles.contDer}>
-                            <div className={styles.stats}>
                             <div className={styles.filaStat}>
-                                    <div className={styles.number}>Healthscore</div>
+                                    <div className={styles.number}>Healthscore:</div>
                                     <div className={styles.number}>
                                         {recipeDetail[0].healthScore}
                                     </div>
@@ -107,17 +108,17 @@ const RecipeDetail = () => {
                                             style={{
                                                 width: `${(recipeDetail[0].healthScore / 100) * 100}%`,
                                             }}
-                                            ></div>
+                                        ></div>
                                     </div>
                             </div>                        
                             <div className={styles.filaStat}> 
-                                    <div className={styles.number}>Summary</div>
+                                    <div className={styles.number}>Summary:</div>
                                     <div className={styles.summary}>
-                                        {recipeDetail[0].summary}
+                                        <p dangerouslySetInnerHTML={{ __html: recipeDetail[0].summary }}></p>
                                     </div>
                             </div>                                                
                             <div className={styles.filaStat}>
-                                    <div className={styles.number}>Steps</div>
+                                    <div className={styles.number}>Steps:</div>
                                     <div className={styles.stepbyStep}>
                                         {recipeDetail[0].stepbyStep}
                                     </div>
@@ -134,7 +135,6 @@ const RecipeDetail = () => {
                                     </Link>
                                 </div>
                                 )}
-                                </div>               
                             </div>    
                     </div>       
                 </div>   

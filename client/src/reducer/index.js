@@ -2,7 +2,7 @@ const initialState = {
   recipes: [],
   allRecipes: [], //copia del estado que siempre tenga todos los videogames.
   diets: [],
-  detail: {},
+  detail: [],
   error: false,
   currentPage: 1,
 };
@@ -19,6 +19,7 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         recipes: action.payload, //videogames porque es lo que estoy renderizando.
+        currentPage: 1,
       };
     case "POST_RECIPE":
       return {
@@ -38,11 +39,6 @@ function rootReducer(state = initialState, action) {
         ...state,
         detail: detallesRecipes,
       };
-    // case "DELETE_DETAIL":
-    //   return {
-    //     ...state,
-    //     detail: action.payload,
-    //   };
     case "GET_DETAIL":
       return {
         ...state,

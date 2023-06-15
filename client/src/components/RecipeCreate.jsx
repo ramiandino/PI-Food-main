@@ -72,8 +72,9 @@ export default function RecipeCreate() {
       input.diets.length
     ) ||
     input.summary > 1500 ||
+    input.healthScore < 0 ||
     input.healthScore > 100 ||
-    input.stepbyStep > 1500;
+    input.stepbyStep > 1500
 
   useEffect(() => {
     dispatch(getDiets());
@@ -90,7 +91,7 @@ export default function RecipeCreate() {
   const handleInput = (event) => {
     setInput({
       ...input,
-      [event.target.name]: event.target.value.toLowerCase(),
+      [event.target.name]: event.target.value
     });
 
     setErrors(
@@ -99,6 +100,7 @@ export default function RecipeCreate() {
         [event.target.name]: event.target.value,
       })
     );
+    console.log(input);
   };
 
   const handleSelect = (event) => {
@@ -169,8 +171,8 @@ export default function RecipeCreate() {
                   <div>Image:</div>
                   <input
                     type="text"
-                    value={input.image}
-                    name="image"
+                    value={input.img}
+                    name="img"
                     onChange={(event) => handleInput(event)}
                     className={styles.inputs}
                     placeholder="URL"

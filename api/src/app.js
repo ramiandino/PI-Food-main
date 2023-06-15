@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const getRecipes = require("./routes/getRecipes");
 const postRecipes = require("./routes/postRecipes");
 const getDiets = require("./routes/getDiets");
+const deleteRecipes = require("./routes/deleteRecipe");
 
 require("./db.js");
 
@@ -30,6 +31,7 @@ server.use((req, res, next) => {
 server.use("/recipes", getRecipes); //si la ruta dice /recipes se va para getRecipes por eso no hace falta ahi pasarle /recipes.
 server.use("/post", postRecipes);
 server.use("/diets", getDiets);
+server.use("/delete", deleteRecipes);
 
 // Error catching endware.
 server.use((err, req, res, next) => {

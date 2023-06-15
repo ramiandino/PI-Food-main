@@ -20,7 +20,9 @@ export function getRecipes() {
 export function getNameRecipes(name) {
   return async function (dispatch) {
     try {
-      const json = await axios.get(`/recipes?name=${name}`); //me va a llegar por payload lo que el usuario este escribiendo en la barra de busqueda.
+      const json = await axios.get(
+        `http://localhost:3001/recipes?name=${name}`
+      ); //me va a llegar por payload lo que el usuario este escribiendo en la barra de busqueda.
       return dispatch({
         type: "GET_NAME_RECIPES",
         payload: json.data, //me va a devolver lo que devuelta la ruta una vez asignado el name.
@@ -36,7 +38,7 @@ export function getNameRecipes(name) {
 
 export function getDiets() {
   return async function (dispatch) {
-    var info = await axios.get("http://localhost:3001/diets", {});
+    const info = await axios.get("http://localhost:3001/diets");
     return dispatch({ type: "GET_DIETS", payload: info.data });
   };
 }
@@ -94,40 +96,59 @@ export function resetRecipes() {
   };
 }
 
-export const getDetail = (id) => {
-  return function (dispatch) {
-    fetch(`http://localhost:3001/recipes/${id}`)
-      .then((response) => response.json())
-      .then((data) => dispatch({ type: "GET_DETAIL", payload: data }));
-  };
-};
-
-// export function deleteRecipe(recipeId) {
-//   return async function (dispatch) {
-//     try {
-//       await axios.delete(`/delete/${recipeId}`);
-//       return dispatch({
-//         type: "DELETE_DETAIL",
-//       });
-//     } catch (error) {
-//       console.log("No puedo eliminar la recipe", error);
-//     }
+// export function resetRecipeDetail() {
+//   return {
+//     type: "RESET_RECIPEDETAIL",
 //   };
 // }
 
-export function deleteRecipe(recipeId) {
-  return new Promise((resolve, reject) => {
-    axios
-      .delete(`/delete/${recipeId}`)
-      .then(() => {
-        resolve({ type: "GET_DETAIL" });
-      })
-      .catch((error) => {
-        console.log("I cannot delete the recipe", error);
-        reject(error);
+// export const getDetail = (id) => {
+//   return function (dispatch) {
+//     fetch(`http://localhost:3001/recipes/${id}`)
+//       .then((response) => response.json())
+//       .then((data) => dispatch({ type: "GET_DETAIL", payload: data }));
+//   };
+// };
+export function getDetail(recipeId) {
+  return async function (dispatch) {
+    try {
+      const json = await axios.get(`http://localhost:3001/recipes/${recipeId}`);
+      return dispatch({
+        type: "GET_DETAIL",
+        payload: json.data,
       });
-  });
+    } catch (error) {
+      console.log("NO TENGO EL DETAIL", error);
+    }
+  };
 }
+
+export function deleteRecipe(recipeId) {
+  return async function (dispatch) {
+    try {
+      await axios.delete(`http://localhost:3001/delete/${recipeId}`);
+      return dispatch({
+        type: "GET_DETAIL",
+      });
+    } catch (error) {
+      console.log("No puedo eliminar la recipe", error);
+    }
+  };
+}
+
+// export function deleteRecipe(recipeId) {
+//   return new Promise((resolve, reject) => {
+//     axios
+//       .delete(`/delete/${recipeId}`)
+//       .then(() => {
+//         resolve({ type: "GET_DETAIL" });
+//       })
+//       .catch((error) => {
+//         console.log("I cannot delete the recipe", error);
+//         reject(error);
+//       });
+//   });
+// }
 
 export function getDetailFromState(payload) {
   return {

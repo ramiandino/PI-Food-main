@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b77f36ea.chunk.css",
+    "main.js": "/static/js/main.8c934c37.chunk.js",
+    "main.js.map": "/static/js/main.8c934c37.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.055a1220.js",
+    "runtime-main.js.map": "/static/js/runtime-main.055a1220.js.map",
+    "static/js/2.7776954c.chunk.js": "/static/js/2.7776954c.chunk.js",
+    "static/js/2.7776954c.chunk.js.map": "/static/js/2.7776954c.chunk.js.map",
+    "static/js/3.6e632a9c.chunk.js": "/static/js/3.6e632a9c.chunk.js",
+    "static/js/3.6e632a9c.chunk.js.map": "/static/js/3.6e632a9c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b77f36ea.chunk.css.map": "/static/css/main.b77f36ea.chunk.css.map",
+    "static/js/2.7776954c.chunk.js.LICENSE.txt": "/static/js/2.7776954c.chunk.js.LICENSE.txt",
+    "static/media/Plato.d8b4e4e5.png": "/static/media/Plato.d8b4e4e5.png",
+    "static/media/Video.455d4501.mp4": "/static/media/Video.455d4501.mp4",
+    "static/media/chef.f6f59e48.png": "/static/media/chef.f6f59e48.png",
+    "static/media/Detail.module.css": "/static/media/fondoCreate.fca39f95.png",
+    "static/media/Home.module.css": "/static/media/fondoHome4.71b51c27.png",
+    "static/media/food.c5fc0446.png": "/static/media/food.c5fc0446.png",
+    "static/media/logo.2afa792c.png": "/static/media/logo.2afa792c.png",
+    "static/media/recipeForm.beed59e8.png": "/static/media/recipeForm.beed59e8.png",
+    "static/media/recipeNotFound.59b383f3.png": "/static/media/recipeNotFound.59b383f3.png",
+    "static/media/sarten.94d2efbb.gif": "/static/media/sarten.94d2efbb.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.055a1220.js",
+    "static/js/2.7776954c.chunk.js",
+    "static/css/main.b77f36ea.chunk.css",
+    "static/js/main.8c934c37.chunk.js"
+  ]
+}

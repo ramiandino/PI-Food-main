@@ -7,8 +7,8 @@ getDiets.get("/", async (req, res) => {
   try {
     if (!cantidadDiets) {
       console.log("I had to create them");
-      const allMyDiets = await getAllRecipes();
-      const recipesDiets = allMyDiets.map((diet) => diet.diets);
+      const allMyRecipes = await getAllRecipes();
+      const recipesDiets = allMyRecipes.map((recipes) => recipes.diets);
       const myDiets = recipesDiets.flat(); // Nuevo arreglo con los elem. de los sub arreglos concatenados -> [[1, 2], [3, 2]] -> [1, 2, 3, 2]
       //El flat() método crea una nueva matriz con todos los elementos de la submatriz concatenados recursivamente hasta la profundidad especificada.
       const mySetDiets = [...new Set(myDiets)]; // Me elimina los repetidos(set solo acepta valores unicos) -> [1, 2, 3, 2] -> [1, 2, 3]

@@ -1,11 +1,11 @@
 .allDetail {
     width: 100%;
     min-height: 100vh;
-    /* background: radial-gradient(circle, rgb(9, 78, 182) 0%, rgba(0, 0, 0, 0.738) 100%); */
-    background-image: url(./images/fondoDetail.png);
+    background-image: url(./images/fondoCreate.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+        
 }
 
 .loading {
@@ -27,12 +27,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1.8rem;
 }
 
 
 .navBar {
-    background-color: #007bff;
+    background: radial-gradient(circle, rgb(123, 136, 137) 0%, rgba(222, 12, 12, 0.443) 100%);
     height: 70px;
     display: flex;
     align-items: center;
@@ -53,14 +53,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 70px;
     height: 100%;
     width: 100%;
+    margin-left: -1px;
 }
 
 .contBlue {
     display: flex;
-    background-color: #007bff;
+    background-color: #f1d063;
     padding: 1rem;
     justify-content: center;
     align-items: center;
@@ -93,8 +94,8 @@
     position: absolute;
     margin-bottom: 5px;
     border-radius: 50px;
-    margin-left: -110px;
-    margin-top: -50px;
+    margin-left: -120px;
+    margin-top: -100px;
 }
 
 /* .circulo {
@@ -113,26 +114,28 @@
     font-family: "Rubik", sans-serif;
     font-size: 15px;
     color: #66625c;
-    margin-bottom: -40px;
+    margin-bottom: -25px;
 }
 
 .diets {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 25px;
     font-family: "Rubik", sans-serif;
     font-size: 14px;
     font-weight: 700;
+    margin-bottom: -150px;
 }
 
 .diets div {
-    color: #000000;
+    color: #66625c;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75px;
-    height: 25px;
+    width: 65px;
+    height: 20px;
     border-radius: 40px;
+    margin-bottom: -150px;
 }
 
 .id {
@@ -142,6 +145,7 @@
     color: #66625c;
     max-width: 50%;
     text-align: center;
+    margin-bottom: -20px;
 }
 
 .contDer {
@@ -150,10 +154,9 @@
     align-items: center;
     justify-content: space-around;
     background-color: transparent;
-    width: 380px;
+    width: 1250px;
     height: 470px;
     border-radius: 50px;
-    margin-bottom: -30px;
 }
 
 .number {
@@ -171,8 +174,8 @@
 }
 
 .deleteButton {
-    color: rgb(204, 33, 33);
-    background-color: #8b1313;
+    color: whitesmoke;
+    background-color: #cd8d4e;
     font-weight: 400;
     font-size: 14px;
     text-decoration: none;
@@ -181,7 +184,6 @@
     border: none;
     margin-top: 5px;
     padding: 0px 10px;
-
 }
 
 .filaStat {
@@ -189,15 +191,9 @@
     justify-content: flex-end;
     gap: 20px;
     font-family: "Rubik", sans-serif;
-    font-weight: 500;
+    font-weight: 750;
     font-size: 15px;
     color: #868686;
-}
-
-.stats {
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
 }
 
 .barra {
@@ -207,25 +203,28 @@
     width: 200px;
     border-radius: 20px;
     overflow: hidden;
+    /* margin-left: 870px; */
 }
 
 .healthScore {
     height: 100%;
-    background-color: #eb544d;
-    max-width: 100%;
+    background-color: #ec1515;
+    width: 100%;
     border-radius: 20px 0px 0px 20px;
 }
 
 .summary {
     height: 100%;
-    background-color: #22c02a;
+    /* background-color: #22c02a; */
     max-width: 100%;
     border-radius: 20px 0px 0px 20px;
+    /* margin-left: 1070px; */
 }
 
 .stepbyStep {
     height: 100%;
-    background-color: #33aeaf;
+    /* background-color: #33aeaf; */
     max-width: 100%;
     border-radius: 20px 0px 0px 20px;
+    /* margin-left: 1070px; */
 }
