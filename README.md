@@ -5,7 +5,7 @@
 # Individual Project - Henry Food
 
 <p align="center">
-  <img height="200" src="[./client/src/components/LandingPage/img/your recipes app.png] />
+  <img height="200" src="./client/src/styles/images/your recipes app.png" />
 </p>
 
 ## Objetivos del Proyecto.
