@@ -5,7 +5,7 @@
 # Individual Project - Henry Food
 
 <p align="center">
-  <img height="200" src="[./client/src/components/LandingPage/img/your recipes app.png](https://raw.githubusercontent.com/YaniAnaGarcia/Henry-Food/main/client/src/components/LandingPage/img/your%20recipes%20app.png) />
+  <img height="200" src="[./client/src/components/LandingPage/img/your recipes app.png] />
 </p>
 
 ## Objetivos del Proyecto.
