@@ -5,7 +5,7 @@
 # Individual Project - Henry Food
 
 <p align="center">
-  <img height="200" src="./client/src/styles/images/yourRecipesApp.png" />
+  <img height="200" src="./client/src/components/LandingPage/img/your recipes app.png" />
 </p>
 
 ## Objetivos del Proyecto.
@@ -56,7 +56,7 @@ npm start
 -BackEnd: Dentro de ./client
 
 ```
+npm start
+```
 
-<div align="center">
-<img src="./cooking.png" alt="" />
-</div>
+# Espero lo disfruten... 😊😉
